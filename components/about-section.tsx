@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Headphones, Wrench, Network, Code } from "lucide-react"
+import { ArrowRight, Headphones, Wrench, Network, Truck } from "lucide-react"
 import Image from "next/image"
 
 const services = [
@@ -16,8 +16,8 @@ const services = [
     title: "Instalação de infraestrutura",
   },
   {
-    icon: Code,
-    title: "Desenvolvimento de sistemas",
+    icon: Truck,
+    title: "Desmobilizações de Loja",
   },
 ]
 
@@ -58,11 +58,11 @@ export function AboutSection() {
                 {services.map((service, index) => {
                   const Icon = service.icon
                   return (
-                    <div key={index} className="flex items-center gap-3 text-white group cursor-pointer">
-                      <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
-                        <Icon className="h-5 w-5 text-primary group-hover:text-white transition-colors" />
+                    <div key={index} className="flex items-center gap-4 text-white group cursor-pointer">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+                        <Icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors" />
                       </div>
-                      <span className="text-sm font-medium group-hover:text-primary transition-colors">
+                      <span className="text-base font-medium group-hover:text-primary transition-colors">
                         {service.title}
                       </span>
                     </div>
