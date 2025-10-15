@@ -17,7 +17,9 @@ const services = [
   },
   {
     icon: Truck,
-    title: "Rollout e IMAC",
+
+    title: "Desmobilizações de Loja",
+
   },
 ]
 

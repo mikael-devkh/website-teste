@@ -48,16 +48,18 @@ const faqData: FAQItem[] = [
       "Sim! Realizamos todo o projeto de cabeamento estruturado seguindo as normas ABNT e TIA/EIA. Isso inclui levantamento de necessidades, projeto técnico, instalação de pontos de rede, certificação de cabos, documentação completa e garantia de 25 anos nos materiais utilizados.",
   },
   {
-    category: "Rollout e IMAC",
-    question: "Como vocês organizam um rollout nacional?",
+
+    category: "Desmobilizações de Loja",
+    question: "Como vocês conduzem uma desmobilização completa de loja?",
     answer:
-      "Criamos um plano detalhado por fase, com cronograma, equipes dedicadas e indicadores de qualidade. Cuidamos da logística de envio e recolhimento de equipamentos, padronizamos a instalação e acompanhamos tudo com relatórios diários para garantir que cada unidade seja atendida dentro do prazo.",
+      "Começamos com o levantamento detalhado dos ativos, definimos cronograma por área e executamos a desmontagem, desconexão e embalagem dos equipamentos. Realizamos logística reversa, descarte adequado e entregamos relatórios de checklist com fotos e inventário atualizado para cada unidade atendida.",
   },
   {
-    category: "Rollout e IMAC",
-    question: "Vocês fazem gestão de inventário durante os projetos?",
+    category: "Desmobilizações de Loja",
+    question: "Vocês têm experiência com impressoras Zebra e periféricos de varejo?",
     answer:
-      "Sim. Utilizamos ferramentas de controle para registrar ativos instalados, removidos ou realocados. Cada equipamento recebe etiqueta de identificação e entregamos a documentação final com o inventário atualizado para facilitar auditorias e futuras manutenções.",
+      "Sim. Nossa equipe é certificada para tratar impressoras Zebra, scanners e PDVs sensíveis. Cuidamos da limpeza, da proteção durante o transporte, da atualização de inventário por número de série e, quando necessário, realizamos reinstalação ou envio para manutenção especializada.",
+
   },
   {
     category: "Geral",

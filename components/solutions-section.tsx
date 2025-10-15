@@ -58,18 +58,20 @@ const solutions = [
   },
   {
     icon: Truck,
-    title: "Rollout e IMAC",
+
+    title: "Desmobilizações de Loja",
     shortDescription:
-      "Coordenamos implantações, movimentações e substituições de equipamentos em larga escala com total padronização.",
+      "Planejamos e executamos a desmontagem completa de lojas e escritórios, com logística reversa especializada em ativos críticos como impressoras Zebra.",
     fullDescription:
-      "Assumimos todo o ciclo de vida do parque tecnológico da sua empresa: planejamento, logística, instalação, movimentação e retirada de equipamentos. Atuamos em projetos de IMAC e rollouts nacionais garantindo padronização, controle de inventário e mínima indisponibilidade para os usuários.",
+      "Coordenamos cada etapa do encerramento de unidades: inventário dos ativos, desconexão, desmontagem, embalagem, transporte e destinação correta dos equipamentos. Nosso time acompanha toda a operação em campo garantindo padronização, prazos curtos e cuidado especial com dispositivos sensíveis, incluindo impressoras Zebra e periféricos essenciais para o varejo.",
     benefits: [
-      "Execução coordenada em múltiplas unidades",
-      "Gestão de inventário e etiquetagem",
-      "IMAC completo (instalação, movimentação, adição e mudança)",
-      "Substituição de equipamentos com descarte responsável",
-      "Profissionais certificados e treinados",
-      "Relatórios de avanço em tempo real",
+      "Planejamento e execução ponta a ponta",
+      "Inventário, etiquetagem e embalagem segura",
+      "Especialistas em impressoras Zebra e periféricos de varejo",
+      "Logística reversa com descarte ambientalmente responsável",
+      "Equipes presenciais em todo o Brasil",
+      "Relatórios de conformidade e checklist fotográfico",
+
     ],
     image: "/it-support-team-working-computers.jpg",
   },
