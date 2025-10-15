@@ -48,6 +48,7 @@ const faqData: FAQItem[] = [
       "Sim! Realizamos todo o projeto de cabeamento estruturado seguindo as normas ABNT e TIA/EIA. Isso inclui levantamento de necessidades, projeto técnico, instalação de pontos de rede, certificação de cabos, documentação completa e garantia de 25 anos nos materiais utilizados.",
   },
   {
+
     category: "Desmobilizações de Loja",
     question: "Como vocês conduzem uma desmobilização completa de loja?",
     answer:
@@ -58,6 +59,7 @@ const faqData: FAQItem[] = [
     question: "Vocês têm experiência com impressoras Zebra e periféricos de varejo?",
     answer:
       "Sim. Nossa equipe é certificada para tratar impressoras Zebra, scanners e PDVs sensíveis. Cuidamos da limpeza, da proteção durante o transporte, da atualização de inventário por número de série e, quando necessário, realizamos reinstalação ou envio para manutenção especializada.",
+
   },
   {
     category: "Geral",

@@ -58,6 +58,7 @@ const solutions = [
   },
   {
     icon: Truck,
+
     title: "Desmobilizações de Loja",
     shortDescription:
       "Planejamos e executamos a desmontagem completa de lojas e escritórios, com logística reversa especializada em ativos críticos como impressoras Zebra.",
@@ -70,6 +71,7 @@ const solutions = [
       "Logística reversa com descarte ambientalmente responsável",
       "Equipes presenciais em todo o Brasil",
       "Relatórios de conformidade e checklist fotográfico",
+
     ],
     image: "/it-support-team-working-computers.jpg",
   },

@@ -91,7 +91,9 @@ export function Footer() {
               <li className="text-foreground/70">Service Desk</li>
               <li className="text-foreground/70">Field Service</li>
               <li className="text-foreground/70">Infraestrutura</li>
+
               <li className="text-foreground/70">Desmobilizações de Loja</li>
+
             </ul>
           </div>
         </div>
