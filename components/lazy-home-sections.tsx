@@ -5,7 +5,6 @@ import dynamic from "next/dynamic"
 const TestimonialsSection = dynamic(
   () => import("@/components/testimonials-section").then((mod) => mod.TestimonialsSection),
   {
-    ssr: false,
     loading: () => <div className="py-24 text-center text-gray-500">Carregando depoimentos...</div>,
   },
 )
@@ -13,7 +12,6 @@ const TestimonialsSection = dynamic(
 const QuoteFormSection = dynamic(
   () => import("@/components/quote-form-section").then((mod) => mod.QuoteFormSection),
   {
-    ssr: false,
     loading: () => <div className="py-24 text-center text-gray-500">Carregando formulário de orçamento...</div>,
   },
 )
@@ -21,7 +19,6 @@ const QuoteFormSection = dynamic(
 const BlogSection = dynamic(
   () => import("@/components/blog-section").then((mod) => mod.BlogSection),
   {
-    ssr: false,
     loading: () => <div className="py-24 text-center text-gray-500">Carregando artigos do blog...</div>,
   },
 )
