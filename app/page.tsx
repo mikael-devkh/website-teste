@@ -4,10 +4,11 @@ import { SolutionsSection } from "@/components/solutions-section"
 import { AboutSection } from "@/components/about-section"
 import { NationalCoverageSection } from "@/components/national-coverage-section"
 import { ProcessSection } from "@/components/process-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
+import { QuoteFormSection } from "@/components/quote-form-section"
+import { BlogSection } from "@/components/blog-section"
 import { WhatsAppWidget } from "@/components/whatsapp-widget"
 import { Footer } from "@/components/footer"
-import { ChatbotWidget } from "@/components/ChatbotWidget"
-import { LazyHomeSections } from "@/components/lazy-home-sections"
 
 export default function Home() {
   return (
@@ -31,12 +32,19 @@ export default function Home() {
         <ProcessSection />
       </div>
 
-      <LazyHomeSections />
+      <div className="bg-white">
+        <TestimonialsSection />
+      </div>
+
+      <QuoteFormSection />
+
+      <div className="bg-gray-50">
+        <BlogSection />
+      </div>
 
       <Footer />
 
       <WhatsAppWidget />
-      <ChatbotWidget />
     </main>
   )
 }
