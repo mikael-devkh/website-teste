@@ -1,5 +1,5 @@
+import Image from "next/image"
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -10,44 +10,31 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">WT</span>
-              </div>
-              <span className="text-foreground font-semibold text-lg">WT Serviços de Tecnologia</span>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/wt-logo-oficial.png"
+                alt="WT Serviços de Tecnologia"
+                width={160}
+                height={48}
+                className="h-12 w-auto"
+                priority
+              />
             </div>
             <p className="text-foreground/70 mb-4 max-w-md">
               Especialistas em Field Service e Outsourcing de TI, oferecendo soluções completas para sua infraestrutura
               tecnológica com agilidade e excelência.
             </p>
-            <div className="flex gap-4">
+            <div className="space-y-2 text-foreground/70">
+              <p className="leading-relaxed">
+                Rua Palermo, 16 - São Judas, São Paulo - SP, 04303-250
+              </p>
               <a
-                href="#"
-                className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Facebook"
+                href="https://wa.me/5511951095026?text=Olá, vim pela página da WT-Serviços em Tecnologia e gostaria de saber mais dos serviços."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium"
               >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
+                Atendimento via WhatsApp
               </a>
             </div>
           </div>
@@ -91,8 +78,7 @@ export function Footer() {
               <li className="text-foreground/70">Service Desk</li>
               <li className="text-foreground/70">Field Service</li>
               <li className="text-foreground/70">Infraestrutura</li>
-              <li className="text-foreground/70">Desenvolvimento</li>
-              <li className="text-foreground/70">Consultoria TI</li>
+              <li className="text-foreground/70">Desmobilizações de Loja</li>
             </ul>
           </div>
         </div>
@@ -103,11 +89,11 @@ export function Footer() {
             © {currentYear} WT Serviços de Tecnologia. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link href="#" className="text-foreground/60 hover:text-primary transition-colors">
+            <Link href="/politica-de-privacidade" className="text-foreground/60 hover:text-primary transition-colors">
               Política de Privacidade
             </Link>
-            <Link href="#" className="text-foreground/60 hover:text-primary transition-colors">
-              Termos de Uso
+            <Link href="/termos-de-responsabilidade" className="text-foreground/60 hover:text-primary transition-colors">
+              Termos de Responsabilidade
             </Link>
           </div>
         </div>
