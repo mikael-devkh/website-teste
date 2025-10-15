@@ -10,7 +10,7 @@ interface FAQItem {
   category: string
 }
 
-const faqData: FAQItem[] = [
+export const faqData: FAQItem[] = [
   {
     category: "Service Desk",
     question: "O que está incluído no Service Desk?",
@@ -48,16 +48,16 @@ const faqData: FAQItem[] = [
       "Sim! Realizamos todo o projeto de cabeamento estruturado seguindo as normas ABNT e TIA/EIA. Isso inclui levantamento de necessidades, projeto técnico, instalação de pontos de rede, certificação de cabos, documentação completa e garantia de 25 anos nos materiais utilizados.",
   },
   {
-    category: "Desenvolvimento",
-    question: "Que tipo de sistemas vocês desenvolvem?",
+    category: "Desmobilizações de Loja",
+    question: "Como vocês conduzem uma desmobilização completa de loja?",
     answer:
-      "Desenvolvemos sistemas web e mobile personalizados, ERPs, CRMs, sistemas de gestão, automação de processos, integrações com APIs, dashboards e relatórios gerenciais. Trabalhamos com as tecnologias mais modernas do mercado e focamos em criar soluções intuitivas e escaláveis.",
+      "Começamos com o levantamento detalhado dos ativos, definimos cronograma por área e executamos a desmontagem, desconexão e embalagem dos equipamentos. Realizamos logística reversa, descarte adequado e entregamos relatórios de checklist com fotos e inventário atualizado para cada unidade atendida.",
   },
   {
-    category: "Desenvolvimento",
-    question: "Quanto tempo leva para desenvolver um sistema?",
+    category: "Desmobilizações de Loja",
+    question: "Vocês têm experiência com impressoras Zebra e periféricos de varejo?",
     answer:
-      "O prazo varia de acordo com a complexidade do projeto. Sistemas simples podem ficar prontos em 4-8 semanas, enquanto projetos mais complexos podem levar de 3 a 6 meses. Trabalhamos com metodologia ágil, entregando funcionalidades incrementalmente para você começar a usar o sistema o quanto antes.",
+      "Sim. Nossa equipe é certificada para tratar impressoras Zebra, scanners e PDVs sensíveis. Cuidamos da limpeza, da proteção durante o transporte, da atualização de inventário por número de série e, quando necessário, realizamos reinstalação ou envio para manutenção especializada.",
   },
   {
     category: "Geral",
@@ -69,7 +69,7 @@ const faqData: FAQItem[] = [
     category: "Geral",
     question: "Vocês oferecem garantia nos serviços?",
     answer:
-      "Sim! Todos os nossos serviços possuem garantia. Para Field Service, garantimos o serviço executado por 90 dias. Em projetos de infraestrutura, a garantia varia de 1 a 25 anos dependendo do tipo de serviço e materiais utilizados. Sistemas desenvolvidos incluem 3 meses de suporte e correções sem custo adicional.",
+      "Sim! Todos os nossos serviços possuem garantia. Para Field Service, garantimos o serviço executado por 90 dias. Em projetos de infraestrutura, a garantia varia de 1 a 25 anos dependendo do tipo de serviço e materiais utilizados. Projetos especiais contam com 3 meses de suporte e correções sem custo adicional.",
   },
 ]
 
