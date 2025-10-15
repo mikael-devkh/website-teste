@@ -1,6 +1,6 @@
 import Script from "next/script"
 import { Navbar } from "@/components/navbar"
-import { FAQSection } from "@/components/faq-section"
+import { FAQSection, faqData } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
 import { WhatsAppWidget } from "@/components/whatsapp-widget"
 import { faqData } from "@/lib/faq-data"
