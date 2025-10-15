@@ -6,7 +6,7 @@ import { WhatsAppWidget } from "@/components/whatsapp-widget"
 export const metadata = {
   title: "Perguntas Frequentes - WT Serviços de Tecnologia",
   description:
-    "Tire suas dúvidas sobre nossos serviços de Service Desk, Field Service, Infraestrutura e Desenvolvimento de Sistemas.",
+    "Tire suas dúvidas sobre nossos serviços de Service Desk, Field Service, Infraestrutura de TI e desmobilizações de loja.",
 }
 
 export default function FAQPage() {

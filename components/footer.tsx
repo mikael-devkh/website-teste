@@ -91,8 +91,7 @@ export function Footer() {
               <li className="text-foreground/70">Service Desk</li>
               <li className="text-foreground/70">Field Service</li>
               <li className="text-foreground/70">Infraestrutura</li>
-              <li className="text-foreground/70">Desenvolvimento</li>
-              <li className="text-foreground/70">Consultoria TI</li>
+              <li className="text-foreground/70">Desmobilizações de Loja</li>
             </ul>
           </div>
         </div>
@@ -103,11 +102,11 @@ export function Footer() {
             © {currentYear} WT Serviços de Tecnologia. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link href="#" className="text-foreground/60 hover:text-primary transition-colors">
+            <Link href="/politica-de-privacidade" className="text-foreground/60 hover:text-primary transition-colors">
               Política de Privacidade
             </Link>
-            <Link href="#" className="text-foreground/60 hover:text-primary transition-colors">
-              Termos de Uso
+            <Link href="/termos-de-responsabilidade" className="text-foreground/60 hover:text-primary transition-colors">
+              Termos de Responsabilidade
             </Link>
           </div>
         </div>
