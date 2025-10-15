@@ -3,7 +3,75 @@
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { faqData } from "@/lib/faq-data"
+
+interface FAQItem {
+  question: string
+  answer: string
+  category: string
+}
+
+const faqData: FAQItem[] = [
+  {
+    category: "Service Desk",
+    question: "O que está incluído no Service Desk?",
+    answer:
+      "Nosso Service Desk inclui suporte técnico remoto N1 e N2, atendimento via telefone, e-mail e chat, gestão de chamados com SLA garantido, monitoramento proativo de sistemas, e relatórios mensais de performance. Atendemos desde questões simples de usuários até problemas mais complexos de infraestrutura.",
+  },
+  {
+    category: "Service Desk",
+    question: "Qual é o tempo médio de resposta?",
+    answer:
+      "Nosso SLA garante resposta em até 30 minutos para chamados críticos e até 2 horas para chamados de prioridade normal. Para chamados de baixa prioridade, o tempo de resposta é de até 4 horas. Oferecemos também suporte 24/7 para clientes com planos premium.",
+  },
+  {
+    category: "Field Service",
+    question: "Vocês atendem em todo o Brasil?",
+    answer:
+      "Sim! Temos cobertura nacional com técnicos especializados em todas as regiões do país. Atendemos em mais de 500 cidades, cobrindo os 27 estados brasileiros. Para regiões mais remotas, coordenamos o deslocamento com antecedência para garantir o atendimento no prazo acordado.",
+  },
+  {
+    category: "Field Service",
+    question: "Como funciona o agendamento de visitas técnicas?",
+    answer:
+      "O agendamento pode ser feito através do nosso portal de chamados, WhatsApp ou telefone. Trabalhamos com janelas de atendimento flexíveis e, sempre que possível, agendamos para o mesmo dia ou próximo dia útil. Para manutenções preventivas, criamos um calendário recorrente de acordo com suas necessidades.",
+  },
+  {
+    category: "Infraestrutura",
+    question: "Quais serviços de infraestrutura vocês oferecem?",
+    answer:
+      "Oferecemos planejamento e execução completa de infraestrutura de TI, incluindo cabeamento estruturado (dados e elétrica), instalação e configuração de servidores, implementação de racks e climatização, organização de data centers, instalação de sistemas de segurança (câmeras, controle de acesso), e muito mais.",
+  },
+  {
+    category: "Infraestrutura",
+    question: "Vocês fazem projetos de cabeamento estruturado?",
+    answer:
+      "Sim! Realizamos todo o projeto de cabeamento estruturado seguindo as normas ABNT e TIA/EIA. Isso inclui levantamento de necessidades, projeto técnico, instalação de pontos de rede, certificação de cabos, documentação completa e garantia de 25 anos nos materiais utilizados.",
+  },
+  {
+    category: "Desenvolvimento",
+    question: "Que tipo de sistemas vocês desenvolvem?",
+    answer:
+      "Desenvolvemos sistemas web e mobile personalizados, ERPs, CRMs, sistemas de gestão, automação de processos, integrações com APIs, dashboards e relatórios gerenciais. Trabalhamos com as tecnologias mais modernas do mercado e focamos em criar soluções intuitivas e escaláveis.",
+  },
+  {
+    category: "Desenvolvimento",
+    question: "Quanto tempo leva para desenvolver um sistema?",
+    answer:
+      "O prazo varia de acordo com a complexidade do projeto. Sistemas simples podem ficar prontos em 4-8 semanas, enquanto projetos mais complexos podem levar de 3 a 6 meses. Trabalhamos com metodologia ágil, entregando funcionalidades incrementalmente para você começar a usar o sistema o quanto antes.",
+  },
+  {
+    category: "Geral",
+    question: "Como funciona a contratação dos serviços?",
+    answer:
+      "O processo é simples: primeiro fazemos uma reunião para entender suas necessidades, depois elaboramos uma proposta personalizada com escopo e valores. Após aprovação, formalizamos o contrato e iniciamos os serviços. Oferecemos planos mensais e projetos pontuais, sempre com transparência total nos custos.",
+  },
+  {
+    category: "Geral",
+    question: "Vocês oferecem garantia nos serviços?",
+    answer:
+      "Sim! Todos os nossos serviços possuem garantia. Para Field Service, garantimos o serviço executado por 90 dias. Em projetos de infraestrutura, a garantia varia de 1 a 25 anos dependendo do tipo de serviço e materiais utilizados. Sistemas desenvolvidos incluem 3 meses de suporte e correções sem custo adicional.",
+  },
+]
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -26,7 +94,7 @@ export function FAQSection() {
           {categories.map((category) => (
             <div key={category} className="mb-8">
               <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <span className="w-1 h-6 bg-primary rounded-full" />
+                <span className="w-1 h-6 bg-[#8BC34A] rounded-full" />
                 {category}
               </h3>
               <div className="space-y-3">
@@ -48,7 +116,7 @@ export function FAQSection() {
                           <span className="font-semibold text-gray-900">{item.question}</span>
                           <ChevronDown
                             className={cn(
-                              "h-5 w-5 text-primary flex-shrink-0 transition-transform duration-300",
+                              "h-5 w-5 text-[#8BC34A] flex-shrink-0 transition-transform duration-300",
                               isOpen && "rotate-180",
                             )}
                           />
@@ -72,7 +140,7 @@ export function FAQSection() {
             href="https://wa.me/5511951095026?text=Olá, tenho uma dúvida sobre os serviços da WT"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 bg-[#8BC34A] hover:bg-[#7CB342] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             Fale Conosco pelo WhatsApp
           </a>

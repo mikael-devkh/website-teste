@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation"
 import { Calendar, ArrowLeft, User, Clock } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
-import Script from "next/script"
 import { getBlogPost, getAllBlogPosts } from "@/lib/blog-posts"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
@@ -21,38 +19,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     notFound()
   }
 
-  const baseUrl = "https://wtservicos.com.br"
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.excerpt,
-    image: [`${baseUrl}${post.image}`],
-    author: {
-      "@type": "Organization",
-      name: post.author,
-    },
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    mainEntityOfPage: `${baseUrl}/blog/${post.slug}`,
-    publisher: {
-      "@type": "Organization",
-      name: "WT Serviços de Tecnologia",
-      logo: {
-        "@type": "ImageObject",
-        url: `${baseUrl}/wt-logo-oficial.png`,
-      },
-    },
-  }
-
   return (
     <>
-      <Script
-        id={`article-schema-${post.slug}`}
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
       <Navbar />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -193,13 +161,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                       className="group bg-white rounded-lg overflow-hidden hover:shadow-lg transition-all border border-gray-200"
                     >
                       <div className="relative h-48 overflow-hidden">
-                        <Image
+                        <img
                           src={relatedPost.image || "/placeholder.svg"}
                           alt={relatedPost.title}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          priority={false}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute top-3 left-3">
                           <span className="bg-primary text-white px-3 py-1 rounded-md text-xs font-semibold">

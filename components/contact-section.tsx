@@ -124,16 +124,8 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <Label htmlFor="service-options" id="service-options-label" className="mb-3 block">
-                    Serviços de interesse:
-                  </Label>
-                  <RadioGroup
-                    id="service-options"
-                    aria-labelledby="service-options-label"
-                    value={formData.service}
-                    onValueChange={handleServiceChange}
-                    className="space-y-3"
-                  >
+                  <Label className="mb-3 block">Serviços de interesse:</Label>
+                  <RadioGroup value={formData.service} onValueChange={handleServiceChange} className="space-y-3">
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="remoto" id="remoto" />
                       <Label htmlFor="remoto" className="font-normal cursor-pointer">

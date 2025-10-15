@@ -1,15 +1,12 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
+import { Menu, X, ChevronDown } from "lucide-react"
 
 export function Navbar() {
-  const { resolvedTheme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
@@ -22,15 +19,11 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   const solutionsSubmenu = [
     { label: "Field Service", href: "/#solucoes" },
     { label: "Service Desk", href: "/#solucoes" },
     { label: "Infraestrutura", href: "/#solucoes" },
-    { label: "Desmobilizações de Loja", href: "/#solucoes" },
+    { label: "Desenvolvimento de Sistemas", href: "/#solucoes" },
   ]
 
   const menuItems = [
@@ -41,12 +34,6 @@ export function Navbar() {
     { label: "Depoimentos", href: "/#depoimentos" },
     { label: "Orçamento", href: "/#orcamento" },
   ]
-
-  const handleThemeToggle = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark")
-  }
-
-  const isDarkMode = mounted && resolvedTheme === "dark"
 
   return (
     <nav
@@ -110,16 +97,6 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Button
-              type="button"
-              variant="ghost"
-              size="icon"
-              onClick={handleThemeToggle}
-              aria-label="Alternar tema"
-              className="text-white/80 hover:text-primary"
-            >
-              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </Button>
             <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold">
               <a
                 href="https://wa.me/5511951095026?text=Olá, vim pela página da WT-Serviços em Tecnologia e gostaria de saber mais dos serviços."
@@ -190,17 +167,6 @@ export function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <Button
-                type="button"
-                variant="ghost"
-                className="justify-start text-white/80 hover:text-primary"
-                onClick={handleThemeToggle}
-              >
-                <span className="flex items-center gap-2">
-                  {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-                  Alternar tema
-                </span>
-              </Button>
               <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold w-full">
                 <a
                   href="https://wa.me/5511951095026?text=Olá, vim pela página da WT-Serviços em Tecnologia e gostaria de saber mais dos serviços."

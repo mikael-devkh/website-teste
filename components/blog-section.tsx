@@ -1,9 +1,8 @@
 "use client"
 
 import { Calendar, ArrowRight, TrendingUp } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { getAllBlogPosts } from "@/lib/blog-posts"
 
 export function BlogSection() {
@@ -35,13 +34,10 @@ export function BlogSection() {
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden">
-                <Image
+                <img
                   src={post.image || "/placeholder.svg"}
                   alt={post.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  priority={false}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
@@ -77,17 +73,12 @@ export function BlogSection() {
 
         {/* CTA to Blog */}
         <div className="text-center">
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="group relative overflow-hidden border-2 border-primary/80 bg-white text-primary font-semibold transition-all duration-300 hover:text-white hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 before:absolute before:inset-0 before:-translate-x-full before:bg-primary before:transition-transform before:duration-300 before:content-[''] group-hover:before:translate-x-0"
-          >
-            <Link href="/blog" className="relative z-10 flex items-center justify-center gap-3">
-              <span>Ver Todos os Artigos</span>
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" aria-hidden="true" />
-            </Link>
-          </Button>
+          <Link href="/blog">
+            <Button size="lg" variant="outline" className="group bg-transparent">
+              Ver Todos os Artigos
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

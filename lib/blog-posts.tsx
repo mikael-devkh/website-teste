@@ -26,7 +26,6 @@ export interface BlogPost {
   content: string
   author: string
   date: string
-  publishedAt: string
   category: string
   image: string
 }
@@ -38,17 +37,16 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     slug: "como-escolher-melhor-servico-field-service",
-    title: "Como Escolher o Melhor Parceiro de Field Service e Garantir Suporte Técnico Presencial",
+    title: "Como Escolher o Melhor Serviço de Field Service para Sua Empresa",
     excerpt:
       "Descubra os critérios essenciais para selecionar um parceiro de Field Service que realmente atenda às necessidades da sua operação.",
     author: "Equipe WT",
     date: "15 de Jan, 2025",
-    publishedAt: "2025-01-15",
     category: "Field Service",
     image: "/professional-team-meeting-technology.jpg",
     content: `
       <h2>A Importância do Field Service na Era Digital</h2>
-      <p>Em um mercado cada vez mais competitivo, compreender como escolher parceiro de field service faz toda a diferença. O atendimento técnico presencial de qualidade tornou-se um diferencial estratégico porque garante suporte técnico presencial alinhado à sua operação e mantém a continuidade dos negócios dos seus clientes.</p>
+      <p>Em um mercado cada vez mais competitivo, o atendimento técnico presencial de qualidade tornou-se um diferencial estratégico. O Field Service não é apenas sobre resolver problemas técnicos - é sobre garantir a continuidade dos negócios dos seus clientes.</p>
 
       <h3>1. Cobertura Geográfica</h3>
       <p>O primeiro critério a considerar é a abrangência do serviço. Um bom parceiro de Field Service deve ter:</p>
@@ -83,7 +81,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>Conclusão</h2>
-      <p>Escolher o parceiro certo de Field Service é uma decisão estratégica que impacta diretamente na satisfação dos seus clientes e na eficiência operacional. Ao avaliar suporte técnico presencial, lembre-se de priorizar fornecedores que entendam o seu segmento e que tenham experiência comprovada em projetos complexos. Na WT, combinamos todos esses elementos para oferecer um serviço de excelência com cobertura nacional.</p>
+      <p>Escolher o parceiro certo de Field Service é uma decisão estratégica que impacta diretamente na satisfação dos seus clientes e na eficiência operacional. Na WT, combinamos todos esses elementos para oferecer um serviço de excelência com cobertura nacional.</p>
 
       <p><strong>Quer saber como podemos ajudar sua empresa?</strong> Entre em contato conosco e descubra nossas soluções personalizadas de Field Service.</p>
     `,
@@ -91,20 +89,19 @@ export const blogPosts: BlogPost[] = [
   {
     id: 2,
     slug: "5-sinais-empresa-precisa-service-desk",
-    title: "5 Sinais de que Preciso de um Service Desk Profissional na Central de Serviços de TI",
+    title: "5 Sinais de que Sua Empresa Precisa de um Service Desk Profissional",
     excerpt:
       "Identifique os indicadores que mostram quando é hora de investir em um Service Desk estruturado para sua operação de TI.",
     author: "Equipe WT",
     date: "10 de Jan, 2025",
-    publishedAt: "2025-01-10",
     category: "Service Desk",
     image: "/it-support-team-working-computers.jpg",
     content: `
       <h2>Quando Investir em um Service Desk?</h2>
-      <p>Muitas empresas começam com suporte técnico informal, mas chega um momento em que a profissionalização se torna necessária. Veja os sinais de que preciso de um service desk estruturado para transformar a central de serviços de TI em um verdadeiro centro de excelência.</p>
+      <p>Muitas empresas começam com suporte técnico informal, mas chega um momento em que a profissionalização se torna necessária. Veja os sinais de que sua empresa precisa de um Service Desk estruturado.</p>
 
       <h3>1. Chamados Perdidos ou Esquecidos</h3>
-      <p>Se sua equipe está perdendo o controle dos chamados, com solicitações sendo esquecidas ou atendidas fora de ordem de prioridade, é hora de estruturar um Service Desk. Um sistema adequado para uma central de serviços de TI garante:</p>
+      <p>Se sua equipe está perdendo o controle dos chamados, com solicitações sendo esquecidas ou atendidas fora de ordem de prioridade, é hora de estruturar um Service Desk. Um sistema adequado garante:</p>
       <ul>
         <li>Registro centralizado de todos os chamados</li>
         <li>Priorização automática baseada em criticidade</li>
@@ -120,7 +117,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h3>3. Crescimento da Demanda</h3>
-      <p>Quando o volume de solicitações cresce, a gestão informal não escala. Esses sinais de que preciso de um service desk mais robusto incluem:</p>
+      <p>Quando o volume de solicitações cresce, a gestão informal não escala. Sinais de sobrecarga incluem:</p>
       <ul>
         <li>Aumento no tempo de resposta</li>
         <li>Reclamações de usuários sobre demora</li>
@@ -144,7 +141,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>A Solução da WT</h2>
-      <p>Na WT, oferecemos Service Desk completo com níveis N1 e N2, garantindo atendimento ágil e eficiente. Nossa equipe especializada utiliza as melhores práticas de ITIL para entregar resultados mensuráveis e fortalecer sua central de serviços de TI.</p>
+      <p>Na WT, oferecemos Service Desk completo com níveis N1 e N2, garantindo atendimento ágil e eficiente. Nossa equipe especializada utiliza as melhores práticas de ITIL para entregar resultados mensuráveis.</p>
 
       <p><strong>Reconheceu algum desses sinais na sua empresa?</strong> Fale conosco e descubra como nosso Service Desk pode transformar seu suporte técnico.</p>
     `,
@@ -152,17 +149,16 @@ export const blogPosts: BlogPost[] = [
   {
     id: 3,
     slug: "infraestrutura-ti-investir-base-solida",
-    title: "Infraestrutura de TI: Investimento em Infraestrutura de TI como Base para Crescimento de Negócio",
+    title: "Infraestrutura de TI: Por Que Investir em uma Base Sólida?",
     excerpt:
       "Entenda como uma infraestrutura de TI bem planejada pode ser o diferencial competitivo que sua empresa precisa.",
     author: "Equipe WT",
     date: "5 de Jan, 2025",
-    publishedAt: "2025-01-05",
     category: "Infraestrutura",
     image: "/modern-data-center-servers.jpg",
     content: `
       <h2>A Fundação do Sucesso Digital</h2>
-      <p>Assim como um prédio precisa de alicerces sólidos, sua operação digital depende de investimento em infraestrutura de TI robusta e bem planejada. Vamos explorar por que esse investimento é crucial para criar a base para crescimento de negócio sustentável.</p>
+      <p>Assim como um prédio precisa de alicerces sólidos, sua operação digital depende de uma infraestrutura de TI robusta e bem planejada. Vamos explorar por que esse investimento é crucial.</p>
 
       <h3>O Que é Infraestrutura de TI?</h3>
       <p>A infraestrutura de TI engloba todos os componentes físicos e virtuais necessários para operar e gerenciar ambientes de TI corporativos:</p>
@@ -176,7 +172,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Benefícios de uma Infraestrutura Sólida</h3>
       
       <h4>1. Disponibilidade e Confiabilidade</h4>
-      <p>Uma infraestrutura bem projetada garante que seus sistemas estejam sempre disponíveis quando necessário. Esse investimento em infraestrutura de TI significa:</p>
+      <p>Uma infraestrutura bem projetada garante que seus sistemas estejam sempre disponíveis quando necessário. Isso significa:</p>
       <ul>
         <li>Menos downtime e interrupções</li>
         <li>Maior produtividade da equipe</li>
@@ -184,7 +180,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h4>2. Escalabilidade</h4>
-      <p>Sua empresa está crescendo? Uma boa infraestrutura cresce junto e serve de base para crescimento de negócio estruturado:</p>
+      <p>Sua empresa está crescendo? Uma boa infraestrutura cresce junto:</p>
       <ul>
         <li>Fácil adição de novos usuários e dispositivos</li>
         <li>Capacidade de suportar aumento de demanda</li>
@@ -200,7 +196,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h4>4. Eficiência Operacional</h4>
-      <p>Infraestrutura moderna significa operação mais eficiente e reforça a base para crescimento de negócio contínuo:</p>
+      <p>Infraestrutura moderna significa operação mais eficiente:</p>
       <ul>
         <li>Automação de processos</li>
         <li>Redução de custos operacionais</li>

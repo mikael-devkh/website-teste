@@ -1,12 +1,10 @@
 "use client"
 
-import { useMemo, useState } from "react"
-import Image from "next/image"
-import Script from "next/script"
+import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Headphones, MapPin, Server, Truck, ArrowRight, CheckCircle2, Clock, Users, Zap } from "lucide-react"
+import { Headphones, MapPin, Server, Code, ArrowRight, CheckCircle2, Clock, Users, Zap } from "lucide-react"
 
 const solutions = [
   {
@@ -59,50 +57,28 @@ const solutions = [
     image: "/modern-server-room-infrastructure.jpg",
   },
   {
-    icon: Truck,
-    title: "Desmobilizações de Loja",
-    shortDescription:
-      "Planejamos e executamos a desmontagem completa de lojas e escritórios, com logística reversa especializada em ativos críticos como impressoras Zebra.",
+    icon: Code,
+    title: "Desenvolvimento",
+    shortDescription: "Criamos soluções sob medida para o seu negócio com tecnologia de ponta.",
     fullDescription:
-      "Coordenamos cada etapa do encerramento de unidades: inventário dos ativos, desconexão, desmontagem, embalagem, transporte e destinação correta dos equipamentos. Nosso time acompanha toda a operação em campo garantindo padronização, prazos curtos e cuidado especial com dispositivos sensíveis, incluindo impressoras Zebra e periféricos essenciais para o varejo.",
+      "Desenvolvemos sistemas personalizados, intuitivos e eficientes que automatizam processos, melhoram a gestão e aumentam a produtividade da sua equipe. Utilizamos as melhores práticas e tecnologias modernas para criar soluções que evoluem com você.",
     benefits: [
-      "Planejamento e execução ponta a ponta",
-      "Inventário, etiquetagem e embalagem segura",
-      "Especialistas em impressoras Zebra e periféricos de varejo",
-      "Logística reversa com descarte ambientalmente responsável",
-      "Equipes presenciais em todo o Brasil",
-      "Relatórios de conformidade e checklist fotográfico",
+      "Sistemas personalizados",
+      "Automação de processos",
+      "Interface intuitiva",
+      "Tecnologias modernas",
+      "Melhoria na gestão",
+      "Aumento de produtividade",
     ],
-    image: "/it-support-team-working-computers.jpg",
+    image: "/software-developers-coding-custom-solutions.jpg",
   },
 ]
 
 export function SolutionsSection() {
   const [selectedSolution, setSelectedSolution] = useState<number | null>(null)
-  const servicesSchema = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@graph": solutions.map((solution) => ({
-        "@type": "Service",
-        name: solution.title,
-        description: solution.fullDescription,
-        provider: {
-          "@type": "Organization",
-          name: "WT Serviços de Tecnologia",
-        },
-      })),
-    }),
-    [],
-  )
 
   return (
     <section id="solucoes" className="py-32">
-      <Script
-        id="services-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
-      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
@@ -186,16 +162,11 @@ export function SolutionsSection() {
               </DialogHeader>
 
               <div className="mt-6">
-                <div className="relative mb-6 h-64 w-full overflow-hidden rounded-lg">
-                  <Image
-                    src={solutions[selectedSolution].image || "/placeholder.svg"}
-                    alt={solutions[selectedSolution].title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 768px"
-                    priority={false}
-                  />
-                </div>
+                <img
+                  src={solutions[selectedSolution].image || "/placeholder.svg"}
+                  alt={solutions[selectedSolution].title}
+                  className="w-full h-64 object-cover rounded-lg mb-6"
+                />
 
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">Benefícios e Diferenciais</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
