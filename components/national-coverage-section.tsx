@@ -4,26 +4,26 @@ import { MapPin, Users, Building2, Clock } from "lucide-react"
 
 export function NationalCoverageSection() {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-24 sm:py-32 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="hidden lg:block absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="hidden lg:block absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Cobertura <span className="text-primary">Nacional</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Técnicos especializados em todo o Brasil, prontos para atender sua empresa com agilidade e excelência
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center mb-16">
           {/* Left side - Globe visualization */}
           <div className="relative">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-              <div className="relative h-[500px] flex items-center justify-center">
+            <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-gray-100">
+              <div className="relative h-[320px] sm:h-[420px] lg:h-[500px] flex items-center justify-center">
                 {/* Globe representation */}
                 <div className="relative w-full h-full flex items-center justify-center">
                   {/* Globe circle */}

@@ -51,9 +51,9 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contato" className="py-24 bg-background">
+    <section id="contato" className="py-20 sm:py-28 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
             Abertura de Chamado
           </h2>
@@ -62,9 +62,9 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 max-w-6xl mx-auto">
           <Card className="border-border bg-card">
-            <CardContent className="p-8">
+            <CardContent className="p-6 sm:p-8">
               <h3 className="text-2xl font-bold text-foreground mb-6">Abra seu chamado.</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -124,8 +124,16 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <Label className="mb-3 block">Serviços de interesse:</Label>
-                  <RadioGroup value={formData.service} onValueChange={handleServiceChange} className="space-y-3">
+                  <Label htmlFor="service-options" id="service-options-label" className="mb-3 block">
+                    Serviços de interesse:
+                  </Label>
+                  <RadioGroup
+                    id="service-options"
+                    aria-labelledby="service-options-label"
+                    value={formData.service}
+                    onValueChange={handleServiceChange}
+                    className="space-y-3"
+                  >
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="remoto" id="remoto" />
                       <Label htmlFor="remoto" className="font-normal cursor-pointer">

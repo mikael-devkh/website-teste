@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -51,45 +51,77 @@ const testimonials = [
 
 export function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const testimonialsPerPage = 3
+  const [visibleCount, setVisibleCount] = useState(3)
+
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCount(1)
+      } else if (window.innerWidth < 1024) {
+        setVisibleCount(2)
+      } else {
+        setVisibleCount(3)
+      }
+    }
+
+    updateVisibleCount()
+    window.addEventListener("resize", updateVisibleCount)
+
+    return () => window.removeEventListener("resize", updateVisibleCount)
+  }, [])
+
+  useEffect(() => {
+    setCurrentIndex((prev) => {
+      if (prev + visibleCount > testimonials.length) {
+        return Math.max(0, testimonials.length - visibleCount)
+      }
+      return prev
+    })
+  }, [visibleCount])
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + testimonialsPerPage >= testimonials.length ? 0 : prev + testimonialsPerPage))
+    setCurrentIndex((prev) => {
+      const nextIndex = prev + visibleCount
+      return nextIndex >= testimonials.length ? 0 : nextIndex
+    })
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? Math.max(0, testimonials.length - testimonialsPerPage) : prev - testimonialsPerPage,
-    )
+    setCurrentIndex((prev) => {
+      if (prev === 0) {
+        return Math.max(0, testimonials.length - visibleCount)
+      }
+      return Math.max(0, prev - visibleCount)
+    })
   }
 
-  const currentTestimonials = testimonials.slice(currentIndex, currentIndex + testimonialsPerPage)
-  const totalPages = Math.ceil(testimonials.length / testimonialsPerPage)
-  const currentPage = Math.floor(currentIndex / testimonialsPerPage)
+  const currentTestimonials = testimonials.slice(currentIndex, currentIndex + visibleCount)
+  const totalPages = Math.ceil(testimonials.length / visibleCount)
+  const currentPage = Math.floor(currentIndex / visibleCount)
 
   return (
-    <section id="depoimentos" className="py-24 bg-gray-50 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-bl-full -mr-48 -mt-48" />
+    <section id="depoimentos" className="py-24 sm:py-32 bg-gray-50 relative overflow-hidden">
+      <div className="hidden md:block absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-bl-full -mr-48 -mt-48" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
             O que <span className="text-primary">Nossos Clientes</span> Estão Falando
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-10 sm:mb-12">
           {currentTestimonials.map((testimonial, index) => (
             <div key={currentIndex + index} className="flex flex-col">
               <Card className="flex-1 bg-gray-900 border-gray-800 relative group hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-6 sm:p-8">
                   <div className="absolute -bottom-3 left-12 w-6 h-6 bg-gray-900 rotate-45 border-r border-b border-gray-800" />
 
                   <p className="text-white leading-relaxed text-base">{testimonial.content}</p>
                 </CardContent>
               </Card>
 
-              <div className="flex items-center gap-4 mt-8 ml-4">
+              <div className="flex items-center gap-4 mt-6 sm:mt-8 ml-4">
                 <Image
                   src={testimonial.image || "/placeholder.svg"}
                   alt={testimonial.name}
@@ -113,7 +145,7 @@ export function TestimonialsSection() {
             variant="ghost"
             size="icon"
             onClick={prevSlide}
-            disabled={currentIndex === 0}
+            disabled={totalPages <= 1}
             className="rounded-full hover:bg-primary/10"
           >
             <ChevronLeft className="h-6 w-6" />
@@ -123,7 +155,7 @@ export function TestimonialsSection() {
             {Array.from({ length: totalPages }).map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentIndex(index * testimonialsPerPage)}
+                onClick={() => setCurrentIndex(index * visibleCount)}
                 className={`h-3 w-3 rounded-full transition-all duration-300 ${
                   index === currentPage ? "bg-primary w-8" : "bg-gray-300 hover:bg-gray-400"
                 }`}
@@ -136,7 +168,7 @@ export function TestimonialsSection() {
             variant="ghost"
             size="icon"
             onClick={nextSlide}
-            disabled={currentIndex + testimonialsPerPage >= testimonials.length}
+            disabled={totalPages <= 1}
             className="rounded-full hover:bg-primary/10"
           >
             <ChevronRight className="h-6 w-6" />

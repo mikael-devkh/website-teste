@@ -1,10 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Headphones, MapPin, Server, Code, ArrowRight, CheckCircle2, Clock, Users, Zap } from "lucide-react"
+import { Headphones, MapPin, Server, Truck, ArrowRight, CheckCircle2, Clock, Users, Zap } from "lucide-react"
 
 const solutions = [
   {
@@ -57,20 +58,21 @@ const solutions = [
     image: "/modern-server-room-infrastructure.jpg",
   },
   {
-    icon: Code,
-    title: "Desenvolvimento",
-    shortDescription: "Criamos soluções sob medida para o seu negócio com tecnologia de ponta.",
+    icon: Truck,
+    title: "Desmobilizações de Loja",
+    shortDescription:
+      "Planejamos e executamos a desmontagem completa de lojas e escritórios, com logística reversa especializada em ativos críticos como impressoras Zebra.",
     fullDescription:
-      "Desenvolvemos sistemas personalizados, intuitivos e eficientes que automatizam processos, melhoram a gestão e aumentam a produtividade da sua equipe. Utilizamos as melhores práticas e tecnologias modernas para criar soluções que evoluem com você.",
+      "Coordenamos cada etapa do encerramento de unidades: inventário dos ativos, desconexão, desmontagem, embalagem, transporte e destinação correta dos equipamentos. Nosso time acompanha toda a operação em campo garantindo padronização, prazos curtos e cuidado especial com dispositivos sensíveis, incluindo impressoras Zebra e periféricos essenciais para o varejo.",
     benefits: [
-      "Sistemas personalizados",
-      "Automação de processos",
-      "Interface intuitiva",
-      "Tecnologias modernas",
-      "Melhoria na gestão",
-      "Aumento de produtividade",
+      "Planejamento e execução ponta a ponta",
+      "Inventário, etiquetagem e embalagem segura",
+      "Especialistas em impressoras Zebra e periféricos de varejo",
+      "Logística reversa com descarte ambientalmente responsável",
+      "Equipes presenciais em todo o Brasil",
+      "Relatórios de conformidade e checklist fotográfico",
     ],
-    image: "/software-developers-coding-custom-solutions.jpg",
+    image: "/it-support-team-working-computers.jpg",
   },
 ]
 
@@ -78,9 +80,9 @@ export function SolutionsSection() {
   const [selectedSolution, setSelectedSolution] = useState<number | null>(null)
 
   return (
-    <section id="solucoes" className="py-32">
+    <section id="solucoes" className="py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
             Nossas <span className="text-primary">Soluções</span>
           </h2>
@@ -89,7 +91,7 @@ export function SolutionsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
           {solutions.map((solution, index) => {
             const Icon = solution.icon
             return (
@@ -100,9 +102,9 @@ export function SolutionsSection() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <CardContent className="relative p-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-primary/10">
-                    <Icon className="h-10 w-10 text-primary" />
+                <CardContent className="relative p-6 sm:p-8">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-primary/10">
+                    <Icon className="h-9 w-9 sm:h-10 sm:w-10 text-primary" />
                   </div>
 
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
@@ -162,11 +164,16 @@ export function SolutionsSection() {
               </DialogHeader>
 
               <div className="mt-6">
-                <img
-                  src={solutions[selectedSolution].image || "/placeholder.svg"}
-                  alt={solutions[selectedSolution].title}
-                  className="w-full h-64 object-cover rounded-lg mb-6"
-                />
+                <div className="relative mb-6 h-64 w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={solutions[selectedSolution].image || "/placeholder.svg"}
+                    alt={solutions[selectedSolution].title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    priority={false}
+                  />
+                </div>
 
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">Benefícios e Diferenciais</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

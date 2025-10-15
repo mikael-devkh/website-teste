@@ -29,9 +29,9 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-32 bg-background">
+    <section className="py-24 sm:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
             Como Trabalhamos
           </h2>
@@ -55,8 +55,8 @@ export function ProcessSection() {
 
                   <div className="relative z-10 text-center">
                     {/* Number Badge */}
-                    <div className="inline-flex items-center justify-center w-24 h-24 bg-primary/10 rounded-full mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                      <Icon className="h-10 w-10 text-primary group-hover:text-primary-foreground transition-colors" />
+                    <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-primary/10 rounded-full mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <Icon className="h-9 w-9 sm:h-10 sm:w-10 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
                     <div className="absolute top-0 right-0 w-8 h-8 bg-secondary rounded-full flex items-center justify-center border-2 border-primary">
                       <span className="text-primary font-bold text-sm">{step.number}</span>

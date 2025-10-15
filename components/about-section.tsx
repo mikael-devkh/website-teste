@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Headphones, Wrench, Network, Code } from "lucide-react"
+import { ArrowRight, Headphones, Wrench, Network, Truck } from "lucide-react"
 import Image from "next/image"
 
 const services = [
@@ -16,8 +16,8 @@ const services = [
     title: "Instalação de infraestrutura",
   },
   {
-    icon: Code,
-    title: "Desenvolvimento de sistemas",
+    icon: Truck,
+    title: "Desmobilizações de Loja",
   },
 ]
 
@@ -38,12 +38,12 @@ const stats = [
 
 export function AboutSection() {
   return (
-    <section id="sobre" className="py-32">
+    <section id="sobre" className="py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Image and Services */}
           <div className="relative">
-            <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[340px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/technical-support-team-working-on-computers-and-se.jpg"
                 alt="Equipe técnica WT trabalhando"
@@ -53,16 +53,16 @@ export function AboutSection() {
             </div>
 
             {/* Services Box */}
-            <div className="absolute bottom-0 left-0 right-0 lg:right-auto lg:w-[280px] bg-gray-900/95 backdrop-blur-sm rounded-t-2xl lg:rounded-2xl p-6 shadow-2xl">
+            <div className="mt-6 lg:mt-0 lg:absolute lg:bottom-0 lg:left-0 lg:right-auto lg:w-[280px] bg-gray-900/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
               <div className="space-y-4">
                 {services.map((service, index) => {
                   const Icon = service.icon
                   return (
-                    <div key={index} className="flex items-center gap-3 text-white group cursor-pointer">
-                      <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
-                        <Icon className="h-5 w-5 text-primary group-hover:text-white transition-colors" />
+                    <div key={index} className="flex items-center gap-4 text-white group cursor-pointer">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+                        <Icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors" />
                       </div>
-                      <span className="text-sm font-medium group-hover:text-primary transition-colors">
+                      <span className="text-base font-medium group-hover:text-primary transition-colors">
                         {service.title}
                       </span>
                     </div>
@@ -93,10 +93,10 @@ export function AboutSection() {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
-                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">{stat.value}</div>
+                  <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">{stat.value}</div>
                   <div className="text-sm text-foreground/70 font-medium">{stat.label}</div>
                 </div>
               ))}

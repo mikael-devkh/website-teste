@@ -1,18 +1,19 @@
 "use client"
 
 import { Calendar, ArrowRight, TrendingUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import { getAllBlogPosts } from "@/lib/blog-posts"
 
 export function BlogSection() {
   const blogPosts = getAllBlogPosts().slice(0, 3)
 
   return (
-    <section className="py-32">
-      <div className="container mx-auto px-4">
+    <section className="py-24 sm:py-32">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
             <TrendingUp className="h-4 w-4" />
             <span className="text-sm font-medium">Blog & Insights</span>
@@ -26,7 +27,7 @@ export function BlogSection() {
         </div>
 
         {/* Blog Posts Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 sm:mb-12">
           {blogPosts.map((post) => (
             <article
               key={post.slug}
@@ -34,10 +35,13 @@ export function BlogSection() {
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden">
-                <img
+                <Image
                   src={post.image || "/placeholder.svg"}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={false}
                 />
                 <div className="absolute top-4 left-4">
                   <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
@@ -73,12 +77,17 @@ export function BlogSection() {
 
         {/* CTA to Blog */}
         <div className="text-center">
-          <Link href="/blog">
-            <Button size="lg" variant="outline" className="group bg-transparent">
-              Ver Todos os Artigos
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="group relative overflow-hidden border-2 border-primary/80 bg-white text-primary font-semibold transition-all duration-300 hover:text-white hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 before:absolute before:inset-0 before:-translate-x-full before:bg-primary before:transition-transform before:duration-300 before:content-[''] group-hover:before:translate-x-0"
+          >
+            <Link href="/blog" className="relative z-10 flex items-center justify-center gap-3">
+              <span>Ver Todos os Artigos</span>
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" aria-hidden="true" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

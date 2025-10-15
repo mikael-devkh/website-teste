@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-primary/5"
+      className="relative min-h-[80vh] md:min-h-screen flex items-center pt-24 pb-16 sm:pt-28 sm:pb-20 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-primary/5"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -29,7 +29,7 @@ export function HeroSection() {
             <p className="text-xl sm:text-2xl text-gray-600 mb-12 text-pretty">Suporte que Resolve, Sem Complicação.</p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animation-delay-200 mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animation-delay-200 mb-12 sm:mb-16">
             <Button
               asChild
               size="lg"
@@ -55,7 +55,7 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in-up animation-delay-400">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in-up animation-delay-400">
             {[
               {
                 icon: Shield,
