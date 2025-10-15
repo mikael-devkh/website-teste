@@ -12,10 +12,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "WT Serviços de Tecnologia | Field Service e Outsourcing de TI",
+  title: "WT Serviços de Tecnologia | Field Service e Desmobilizações de Loja",
   description:
-    "Suporte técnico especializado em Field Service e Outsourcing de TI. Service Desk, infraestrutura, desenvolvimento e muito mais.",
-  keywords: "field service, outsourcing TI, suporte técnico, service desk, infraestrutura, desenvolvimento",
+    "Suporte técnico especializado em Field Service, Service Desk, infraestrutura de TI e desmobilizações completas de lojas com foco em impressoras Zebra.",
+  keywords: "field service, desmobilização de loja, impressoras zebra, suporte técnico, service desk, infraestrutura",
     generator: 'v0.app'
 }
 

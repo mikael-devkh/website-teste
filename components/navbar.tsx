@@ -23,7 +23,7 @@ export function Navbar() {
     { label: "Field Service", href: "/#solucoes" },
     { label: "Service Desk", href: "/#solucoes" },
     { label: "Infraestrutura", href: "/#solucoes" },
-    { label: "Desenvolvimento de Sistemas", href: "/#solucoes" },
+    { label: "Desmobilizações de Loja", href: "/#solucoes" },
   ]
 
   const menuItems = [
