@@ -27,9 +27,7 @@ export function QuoteFormSection() {
     { id: "service-desk", label: "Service Desk (Suporte Remoto)" },
     { id: "field-service", label: "Field Service (Suporte Presencial)" },
     { id: "infrastructure", label: "Infraestrutura de TI" },
-
     { id: "store-decommission", label: "Desmobilizações de Loja (Encerramento de unidades)" },
-
   ]
 
   const handleSubmit = (e: React.FormEvent) => {

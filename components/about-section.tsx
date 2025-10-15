@@ -17,9 +17,7 @@ const services = [
   },
   {
     icon: Truck,
-
     title: "Desmobilizações de Loja",
-
   },
 ]
 

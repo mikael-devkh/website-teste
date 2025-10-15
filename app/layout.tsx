@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "Suporte técnico especializado em Field Service, Service Desk, infraestrutura de TI e desmobilizações completas de lojas com foco em impressoras Zebra.",
   keywords: "field service, desmobilização de loja, impressoras zebra, suporte técnico, service desk, infraestrutura",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
