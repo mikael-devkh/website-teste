@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Headphones, Wrench, Network, Code } from "lucide-react"
+import { ArrowRight, Headphones, Wrench, Network, Truck } from "lucide-react"
 import Image from "next/image"
 
 const services = [
@@ -16,8 +16,8 @@ const services = [
     title: "Instalação de infraestrutura",
   },
   {
-    icon: Code,
-    title: "Desenvolvimento de sistemas",
+    icon: Truck,
+    title: "Rollout e IMAC",
   },
 ]
 

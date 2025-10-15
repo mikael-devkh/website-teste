@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Headphones, MapPin, Server, Code, ArrowRight, CheckCircle2, Clock, Users, Zap } from "lucide-react"
+import { Headphones, MapPin, Server, Truck, ArrowRight, CheckCircle2, Clock, Users, Zap } from "lucide-react"
 
 const solutions = [
   {
@@ -57,20 +57,21 @@ const solutions = [
     image: "/modern-server-room-infrastructure.jpg",
   },
   {
-    icon: Code,
-    title: "Desenvolvimento",
-    shortDescription: "Criamos soluções sob medida para o seu negócio com tecnologia de ponta.",
+    icon: Truck,
+    title: "Rollout e IMAC",
+    shortDescription:
+      "Coordenamos implantações, movimentações e substituições de equipamentos em larga escala com total padronização.",
     fullDescription:
-      "Desenvolvemos sistemas personalizados, intuitivos e eficientes que automatizam processos, melhoram a gestão e aumentam a produtividade da sua equipe. Utilizamos as melhores práticas e tecnologias modernas para criar soluções que evoluem com você.",
+      "Assumimos todo o ciclo de vida do parque tecnológico da sua empresa: planejamento, logística, instalação, movimentação e retirada de equipamentos. Atuamos em projetos de IMAC e rollouts nacionais garantindo padronização, controle de inventário e mínima indisponibilidade para os usuários.",
     benefits: [
-      "Sistemas personalizados",
-      "Automação de processos",
-      "Interface intuitiva",
-      "Tecnologias modernas",
-      "Melhoria na gestão",
-      "Aumento de produtividade",
+      "Execução coordenada em múltiplas unidades",
+      "Gestão de inventário e etiquetagem",
+      "IMAC completo (instalação, movimentação, adição e mudança)",
+      "Substituição de equipamentos com descarte responsável",
+      "Profissionais certificados e treinados",
+      "Relatórios de avanço em tempo real",
     ],
-    image: "/software-developers-coding-custom-solutions.jpg",
+    image: "/it-support-team-working-computers.jpg",
   },
 ]
 

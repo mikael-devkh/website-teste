@@ -48,16 +48,16 @@ const faqData: FAQItem[] = [
       "Sim! Realizamos todo o projeto de cabeamento estruturado seguindo as normas ABNT e TIA/EIA. Isso inclui levantamento de necessidades, projeto técnico, instalação de pontos de rede, certificação de cabos, documentação completa e garantia de 25 anos nos materiais utilizados.",
   },
   {
-    category: "Desenvolvimento",
-    question: "Que tipo de sistemas vocês desenvolvem?",
+    category: "Rollout e IMAC",
+    question: "Como vocês organizam um rollout nacional?",
     answer:
-      "Desenvolvemos sistemas web e mobile personalizados, ERPs, CRMs, sistemas de gestão, automação de processos, integrações com APIs, dashboards e relatórios gerenciais. Trabalhamos com as tecnologias mais modernas do mercado e focamos em criar soluções intuitivas e escaláveis.",
+      "Criamos um plano detalhado por fase, com cronograma, equipes dedicadas e indicadores de qualidade. Cuidamos da logística de envio e recolhimento de equipamentos, padronizamos a instalação e acompanhamos tudo com relatórios diários para garantir que cada unidade seja atendida dentro do prazo.",
   },
   {
-    category: "Desenvolvimento",
-    question: "Quanto tempo leva para desenvolver um sistema?",
+    category: "Rollout e IMAC",
+    question: "Vocês fazem gestão de inventário durante os projetos?",
     answer:
-      "O prazo varia de acordo com a complexidade do projeto. Sistemas simples podem ficar prontos em 4-8 semanas, enquanto projetos mais complexos podem levar de 3 a 6 meses. Trabalhamos com metodologia ágil, entregando funcionalidades incrementalmente para você começar a usar o sistema o quanto antes.",
+      "Sim. Utilizamos ferramentas de controle para registrar ativos instalados, removidos ou realocados. Cada equipamento recebe etiqueta de identificação e entregamos a documentação final com o inventário atualizado para facilitar auditorias e futuras manutenções.",
   },
   {
     category: "Geral",
@@ -69,7 +69,7 @@ const faqData: FAQItem[] = [
     category: "Geral",
     question: "Vocês oferecem garantia nos serviços?",
     answer:
-      "Sim! Todos os nossos serviços possuem garantia. Para Field Service, garantimos o serviço executado por 90 dias. Em projetos de infraestrutura, a garantia varia de 1 a 25 anos dependendo do tipo de serviço e materiais utilizados. Sistemas desenvolvidos incluem 3 meses de suporte e correções sem custo adicional.",
+      "Sim! Todos os nossos serviços possuem garantia. Para Field Service, garantimos o serviço executado por 90 dias. Em projetos de infraestrutura, a garantia varia de 1 a 25 anos dependendo do tipo de serviço e materiais utilizados. Projetos especiais contam com 3 meses de suporte e correções sem custo adicional.",
   },
 ]
 
