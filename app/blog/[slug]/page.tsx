@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import { Calendar, ArrowLeft, User, Clock } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { getBlogPost, getAllBlogPosts } from "@/lib/blog-posts"
 import { Button } from "@/components/ui/button"
@@ -161,10 +162,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                       className="group bg-white rounded-lg overflow-hidden hover:shadow-lg transition-all border border-gray-200"
                     >
                       <div className="relative h-48 overflow-hidden">
-                        <img
+                        <Image
                           src={relatedPost.image || "/placeholder.svg"}
                           alt={relatedPost.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          priority={false}
                         />
                         <div className="absolute top-3 left-3">
                           <span className="bg-primary text-white px-3 py-1 rounded-md text-xs font-semibold">

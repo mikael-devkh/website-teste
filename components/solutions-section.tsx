@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
@@ -163,11 +164,16 @@ export function SolutionsSection() {
               </DialogHeader>
 
               <div className="mt-6">
-                <img
-                  src={solutions[selectedSolution].image || "/placeholder.svg"}
-                  alt={solutions[selectedSolution].title}
-                  className="w-full h-64 object-cover rounded-lg mb-6"
-                />
+                <div className="relative mb-6 h-64 w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={solutions[selectedSolution].image || "/placeholder.svg"}
+                    alt={solutions[selectedSolution].title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    priority={false}
+                  />
+                </div>
 
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">Benefícios e Diferenciais</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
