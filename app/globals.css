@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --font-inter: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* Paleta clara com fundo branco/cinza claro e verde limão como destaque */
   --background: oklch(0.99 0 0); /* Branco suave */
   --foreground: oklch(0.2 0 0); /* Cinza escuro para texto */
@@ -51,6 +52,7 @@
 }
 
 .dark {
+  --font-inter: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* Tema escuro mantido para navbar e footer */
   --background: oklch(0.15 0 0);
   --foreground: oklch(0.98 0 0);

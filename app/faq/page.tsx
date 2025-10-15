@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar"
 import { FAQSection, faqData } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
 import { WhatsAppWidget } from "@/components/whatsapp-widget"
+import { faqData } from "@/lib/faq-data"
 
 export const metadata = {
   title: "Perguntas Frequentes - WT Serviços de Tecnologia",
