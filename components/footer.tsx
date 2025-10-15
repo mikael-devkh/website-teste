@@ -75,10 +75,18 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Serviços</h3>
             <ul className="space-y-2">
-              <li className="text-foreground/70">Service Desk</li>
-              <li className="text-foreground/70">Field Service</li>
-              <li className="text-foreground/70">Infraestrutura</li>
-              <li className="text-foreground/70">Desmobilizações de Loja</li>
+              {[
+                "Service Desk",
+                "Field Service",
+                "Infraestrutura",
+                "Desmobilizações de Loja",
+              ].map((service) => (
+                <li key={service}>
+                  <Link href="/#solucoes" className="text-foreground/70 hover:text-primary transition-colors">
+                    {service}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
