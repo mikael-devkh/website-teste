@@ -1,4 +1,5 @@
 import { Calendar, ArrowRight, TrendingUp } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { getAllBlogPosts } from "@/lib/blog-posts"
 import { Button } from "@/components/ui/button"
@@ -40,10 +41,13 @@ export default function BlogPage() {
                 >
                   {/* Image */}
                   <div className="relative h-56 overflow-hidden">
-                    <img
+                    <Image
                       src={post.image || "/placeholder.svg"}
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      priority={false}
                     />
                     <div className="absolute top-4 left-4">
                       <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
