@@ -10,7 +10,7 @@ interface FAQItem {
   category: string
 }
 
-const faqData: FAQItem[] = [
+export const faqData: FAQItem[] = [
   {
     category: "Service Desk",
     question: "O que está incluído no Service Desk?",

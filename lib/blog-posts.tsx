@@ -26,6 +26,7 @@ export interface BlogPost {
   content: string
   author: string
   date: string
+  publishedAt: string
   category: string
   image: string
 }
@@ -42,6 +43,7 @@ export const blogPosts: BlogPost[] = [
       "Descubra os critérios essenciais para selecionar um parceiro de Field Service que realmente atenda às necessidades da sua operação.",
     author: "Equipe WT",
     date: "15 de Jan, 2025",
+    publishedAt: "2025-01-15",
     category: "Field Service",
     image: "/professional-team-meeting-technology.jpg",
     content: `
@@ -94,6 +96,7 @@ export const blogPosts: BlogPost[] = [
       "Identifique os indicadores que mostram quando é hora de investir em um Service Desk estruturado para sua operação de TI.",
     author: "Equipe WT",
     date: "10 de Jan, 2025",
+    publishedAt: "2025-01-10",
     category: "Service Desk",
     image: "/it-support-team-working-computers.jpg",
     content: `
@@ -154,6 +157,7 @@ export const blogPosts: BlogPost[] = [
       "Entenda como uma infraestrutura de TI bem planejada pode ser o diferencial competitivo que sua empresa precisa.",
     author: "Equipe WT",
     date: "5 de Jan, 2025",
+    publishedAt: "2025-01-05",
     category: "Infraestrutura",
     image: "/modern-data-center-servers.jpg",
     content: `

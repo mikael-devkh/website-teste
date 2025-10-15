@@ -1,7 +1,9 @@
 "use client"
 
-import { useState } from "react"
+
+import { useMemo, useState } from "react"
 import Image from "next/image"
+import Script from "next/script"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
@@ -78,9 +80,30 @@ const solutions = [
 
 export function SolutionsSection() {
   const [selectedSolution, setSelectedSolution] = useState<number | null>(null)
+  const servicesSchema = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@graph": solutions.map((solution) => ({
+        "@type": "Service",
+        name: solution.title,
+        description: solution.fullDescription,
+        provider: {
+          "@type": "Organization",
+          name: "WT Serviços de Tecnologia",
+        },
+      })),
+    }),
+    [],
+  )
 
   return (
     <section id="solucoes" className="py-32">
+      <Script
+        id="services-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
